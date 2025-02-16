@@ -55,18 +55,18 @@ headers = {
 n=0
 while 1:
     num = getPlace()
-    # data = {
-    #     "chat_id":"-1001850388716",
-    #     "text":f"\n        طلب جديد من {getName()}\n\n        رقم الهاتف: {getPhone()}\n\n        الولاية: {getWilaya(num)}\n\n        البلدية: {getBaladiya(num)}\n\n        الاختيار المحدد: \n\n        الكمية: {getNumber()}\n\n        المنتج المحدد: {getProduct()}\n\n        حجم ديسك دير: {getSize()}\n\n    "
-    #     }
-    data = {
-        "chat_id":"-1001850388716",
-        "text":f"\n        طلب جديد من جاك عزرائيل\n\n        رقم الهاتف: {getPhone()}\n\n        الولاية: قالولي نتا سراق ولد قحبة\n\n        البلدية: يدك في زبي\n\n        الاختيار المحدد: \n\n        الكمية: شفت كفاه جبت تطيح ليماك\n\n        المنتج المحدد: رجع للسيد لي سرقتو دراهمو ولا ننيكك هذا مجرد تحذير ما شفت والو اسمو Mohamed Oukil\n\n        حجم ديسك دير: حجم بزازل مك\n\n    "
-        }
+     data = {
+         "chat_id":"-1001850388716",
+         "text":f"\n        طلب جديد من {getName()}\n\n        رقم الهاتف: {getPhone()}\n\n        الولاية: {getWilaya(num)}\n\n        البلدية: {getBaladiya(num)}\n\n        الاختيار المحدد: \n\n        الكمية: {getNumber()}\n\n        المنتج المحدد: {getProduct()}\n\n        حجم ديسك دير: {getSize()}\n\n    "
+         }
+    ##data = {
+     #   "chat_id":"-1001850388716",
+     #   "text":f"\n        طلب جديد من جاك عزرائيل\n\n        رقم الهاتف: {getPhone()}\n\n        الولاية: قالولي نتا سراق ولد قحبة\n\n        البلدية: يدك في زبي\n\n        الاختيار المحدد: \n\n        الكمية: شفت كفاه جبت تطيح ليماك\n\n        المنتج المحدد: رجع للسيد لي سرقتو دراهمو ولا ننيكك هذا مجرد تحذير ما شفت والو اسمو Mohamed Oukil\n\n        حجم ديسك دير: حجم بزازل مك\n\n    "
+      #  }
     resp = requests.post(url, data=data, headers=headers)
     if resp.status_code == 200:
         n+=1
-        print(f'Requests sent: {n}', end='\r')
+        print(f'Requests sent: {n}               ', end='\r')
     else:
-        print('Rate limited, sleeping..')
-        time.sleep(60)
+        print('Rate limited, sleeping..', end='\r')
+        time.sleep(10)
