@@ -55,7 +55,7 @@ headers = {
 n=0
 while 1:
     num = getPlace()
-     data = {
+    data = {
          "chat_id":"-1001850388716",
          "text":f"\n        طلب جديد من {getName()}\n\n        رقم الهاتف: {getPhone()}\n\n        الولاية: {getWilaya(num)}\n\n        البلدية: {getBaladiya(num)}\n\n        الاختيار المحدد: \n\n        الكمية: {getNumber()}\n\n        المنتج المحدد: {getProduct()}\n\n        حجم ديسك دير: {getSize()}\n\n    "
          }
